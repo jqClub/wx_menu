@@ -1,0 +1,75 @@
+/*新加的  */
+.test {
+  border: 1px solid black;
+}
+/*通用的样式  */
+.centered {
+  width: 90%;
+  margin: 0 auto;
+}
+#id-view-all {
+  background: url('data:image/gif;base64,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')
+}
+/*第一部分顶部样式  */
+#id-view-top {
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px dashed #DDDDDD;
+}
+#id-view-top .left{
+
+}
+#id-view-top .left1 {
+  font-size: 22px;
+  margin-bottom: 10px; 
+}
+#id-view-top .left2 {
+  font-size: 14px;
+  color: #969696;
+}
+#id-view-top .right1 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+/*第二部分中间的内容部分  */
+#id-view-center {
+  display: flex;
+  flex-direction: column;
+}
+#id-view-center .view-li{
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  align-items: center;
+  font-size: 14px;
+  position: relative;
+}
+#id-view-center .images-css {
+  width: 20px;
+  height: 20px;
+  margin-right: 15px;
+}
+.image-arrow {
+  width: 20px;
+  height: 25px;
+  position: absolute;
+  right: 5px;
+}
+/*第三部分菜谱展示  */
+/* .circle  { 
+    -webkit-border-radius: 50em; 
+    -moz-border-radius: 50em; 
+    border-radius: 50em; 
+} */
+.image-wrap { 
+    -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,1), inset 0 2px 1px rgba(255,255,255,.5), inset 0 -9px 2px rgba(0,0,0,.6), inset 0 -12px 2px rgba(255,255,255,.3); 
+    -moz-box-shadow: inset 0 0 4px rgba(0,0,0,1), inset 0 2px 1px rgba(255,255,255,.5), inset 0 -9px 2px rgba(0,0,0,.6), inset 0 -12px 2px rgba(255,255,255,.3); 
+    box-shadow: inset 0 0 4px rgba(0,0,0,1), inset 0 2px 1px rgba(255,255,255,.5), inset 0 -9px 2px rgba(0,0,0,.6), inset 0 -12px 2px rgba(255,255,255,.3); 
+    -webkit-border-radius: 20px; 
+    -moz-border-radius: 20px; 
+    border-radius: 20px; 
+}

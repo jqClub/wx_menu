@@ -1,0 +1,39 @@
+<!--index.wxml-->
+<view id="id-view-all">
+  <view id="id-view-top" class="centered">
+    <view class="left">
+      <view class="left1">湖北餐馆</view>
+      <view class="left2">美食 | 中晚餐</view>
+    </view>
+     <view class="right">
+        <image class="right1" src="../../images/shop.jpg"></image> 
+    </view>
+  </view>
+  <view id="id-view-center" class="centered">
+    <view class="view-li"  bindtap="openArea">
+      <image class="right1 images-css" src="../../images/area.png"></image>
+      <view>河南工程学院南门对面</view>
+      <image class="image-arrow" src="../../images/arrow.png"></image>
+    </view>
+    <view class="view-li time">
+       <image class="right1 images-css" src="../../images/timer.png"></image>
+        <view>11:00-21:00</view>
+    </view>
+    <view class="view-li phone" bindtap="callmeTap">
+      <image class="right1 images-css" src="../../images/phone.png"></image>
+      <view>13633847837</view>
+      <image class="image-arrow" src="../../images/arrow.png"></image>
+    </view>
+    <view class="view-li">
+      <image class="right1 images-css" src="../../images/img.png"></image>
+      <view>菜谱介绍</view>
+    </view>
+  </view>
+      <!-- <button id="0" type="primary" bindtap="listenerBtnGetLocation">定位当前位置并打开内置地图</button> -->
+  <view class='detail_img'>
+         <view class='view_img image-wrap' wx:for="{{imglist}}" wx:for-item="image" wx:key="imglist">
+           <image class="" src='{{image}}' mode='aspectFit' data-src="{{image}}" bindtap="previewImage"></image>
+         </view>
+          <view style='clear:both;'></view> 
+    </view> 
+</view>
