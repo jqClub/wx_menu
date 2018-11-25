@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<view id="id-view-all">
+<view wx:if="{{show_menu == 'all'}}" id="id-view-all">
   <view id="id-view-top" class="centered">
     <view class="left">
       <view class="left1">湖北餐馆</view>
@@ -10,6 +10,10 @@
     </view>
   </view>
   <view id="id-view-center" class="centered">
+      
+      <!--<button catchtap="bindViewTap_three" data-targe="setting">setting</button> 
+      <button catchtap="bindViewTap_three" data-targe="time">time</button> -->
+      
     <view class="view-li"  bindtap="openArea">
       <image class="right1 images-css" src="../../images/area.png"></image>
       <view>河南工程学院南门对面</view>
@@ -37,3 +41,45 @@
           <view style='clear:both;'></view> 
     </view> 
 </view>
+
+<view wx:elif="{{show_menu == 'no'}}" class="container timer {{isRuning ? 'timer--runing': ''}}">
+    <view class="timer_main">
+         <view class="timer_time-wrap">
+                <view class="timer_progress_mask"></view>
+                <view class="timer_progress timer_left">
+                    <view class="timer_circle timer_circle--left" style="transform: rotate({{leftDeg}}deg);"></view>
+                </view>
+                <view class="timer_progress timer_right">
+                    <view class="timer_circle timer_circle--right" style="transform: rotate({{rightDeg}}deg);"></view>
+                </view>
+                <text wx:if="{{!completed}}" class="timer_time">{{remainTimeText}}</text>
+                <text 
+                    wx:if="{{isRuning}}" 
+                    animation="{{nameAnimation}}" 
+                    class="timer_taskName">{{taskName}}{{completed ? '已完成！' : '中'}}</text>
+                <image 
+                    wx:if="{{completed}}" 
+                    class="timer_done" 
+                    src="../../image/complete.png"></image>
+         </view>
+         <input 
+            type="text" 
+            placeholder-style="text-align:center" 
+            class="timer_inputname" 
+            bindinput="changeLogName"
+            placeholder="给您的任务取个名字吧"/>
+    </view>
+    
+    <view class="timer_footer">
+      <view 
+        bindtap="startTimer" 
+        data-type="work" 
+        class="timer_ctrl {{isRuning && timerType == 'rest' ? 'hide' : ''}}" >{{isRuning ? '完成': '工作'}}</view>
+
+      <view 
+        bindtap="startTimer" 
+        data-type="rest" 
+        class="timer_ctrl {{isRuning && timerType == 'work' ? 'hide' : ''}}" >{{isRuning ? '完成': '休息'}}</view>
+    </view>
+</view>
+
